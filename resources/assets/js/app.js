@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -17,14 +16,17 @@ window.Vue = require('vue');
 //前端验证
 
 import Vue from 'vue';
-import VeeValidate from 'vee-validate';
-
+import zh_CN from 'vee-validate/dist/locale/zh_CN';
+import VeeValidate, { Validator } from 'vee-validate';
+Validator.localize('zh_CN', zh_CN);
 Vue.use(VeeValidate);
+
 
 //引用 VueRouter  并告诉vue  使用VueRouter
 import VueRouter from 'vue-router';
 //将路由文件引入进来
 import router from './routes';
+
 Vue.use(VueRouter);
 
 
@@ -33,7 +35,8 @@ Vue.use(VueRouter);
 const app = new Vue({
     el: '#app',
     router,
-    mounted(){
-        console.log(router);
-}
+    mounted() {
+
+    },
+    methods: {}
 });

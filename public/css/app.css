@@ -8350,3 +8350,14 @@ button.close {
   }
 }
 
+.left_nav {
+  height: 670px;
+  background: white;
+}
+
+.modal_div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 500px;
+}
+

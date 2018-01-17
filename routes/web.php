@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+//
 
 Route::any('{all}', function () {
     return view('home');
 })->where(['all'=>'.*']);
+

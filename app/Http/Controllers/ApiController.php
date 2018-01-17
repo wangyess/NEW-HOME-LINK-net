@@ -24,7 +24,7 @@ class ApiController extends Controller
     //读取
     public function read()
     {
-        return $this->model->simplePaginate(2) ? suc($this->model->simplePaginate(2)) : err('internal_error');
+        return $this->model->simplePaginate(12) ? suc($this->model->simplePaginate(12)) : err('internal_error');
     }
 
     //删除
@@ -48,7 +48,10 @@ class ApiController extends Controller
         }
         return err('invalid_id');
     }
-
+    //获取所有数据的总数
+    public function number(){
+       return $this->model->count();
+    }
     //验证规则
     public function validate_rule($rule_arr)
     {

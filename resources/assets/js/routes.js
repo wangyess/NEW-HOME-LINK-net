@@ -6,7 +6,18 @@ let routes = [
     {path: '/signup', component: require('./components/Signup.vue')},
     {path: '/login', component: require('./components/Login.vue')},
     {path: '/logout', component: require('./components/Logout.vue')},
-    {path: '/admin/house', component: require('./components/AdminHouse.vue')}
+    {path: '/admin/house', component: require('./components/AdminHouse.vue'),
+        children: [
+            {
+                path: 'fill',
+                component: require('./components/Fillform.vue')
+            },
+            {
+                path: 'see',
+                component: require('./components/SeeForm.vue')
+            }
+            ]
+    },
 ];
 //实例化一个路由
 

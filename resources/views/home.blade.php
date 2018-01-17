@@ -14,14 +14,26 @@
         <nav class="navbar navbar-default">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li class="active"><router-link to="/">首页<span class="sr-only">(current)</span></router-link></li>
-                    <li><router-link to="/admin/house">admin</router-link></li>
+                    {{--class="list-group-item" activeClass="active" exact--}}
+                    <li>
+                        <router-link to="/">首页<span class="sr-only">(current)</span></router-link>
+                    </li>
+                    <li>
+                        <router-link to="/admin/house">admin</router-link>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><router-link to="/signup">注册</router-link></li>
-                    <li><router-link to="/login">登录</router-link></li>
-                    <li><router-link to="/logout">推出</router-link></li>
+                    <li>
+                        <router-link to="/signup">注册</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/login">登录</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/logout">推出</router-link>
+                    </li>
                 </ul>
+
             </div>
         </nav>
     </div>
