@@ -5,7 +5,8 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li> <router-link to="/admin/house/fill">填写表单</router-link></li>
                     <li> <router-link to="/admin/house/see">查看表单</router-link></li>
-                    <li class="disabled"> <router-link to="/admin/house/see">管理用户</router-link></li>
+                    <li> <router-link to="/admin/house/user">管理用户</router-link></li>
+                    <li class="disabled"> <router-link to="/admin/house/user">后续待增</router-link></li>
                 </ul>
             </div>
             <div class="col-md-10">
@@ -17,7 +18,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+
         }
     }
 </script>
