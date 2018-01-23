@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::any('/{model}/{action}',function ($model,$action){
     //通过命名空间找到 对应的控制器 new一下  进入控制器
-    $klass= '\App\Http\Controllers\\'.$model.'Controller';
+    $klass= '\App\Http\Controllers\\'.ucfirst($model).'Controller';
     $klass = new $klass($model);
     return $klass->$action();
 });
