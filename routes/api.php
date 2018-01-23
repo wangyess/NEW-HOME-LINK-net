@@ -19,5 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::any('/{model}/{action}',function ($model,$action){
     //通过命名空间找到 对应的控制器 new一下  进入控制器
     $klass= '\App\Http\Controllers\\'.$model.'Controller';
-    return (new $klass($model))->$action();
+    $klass = new $klass($model);
+    return $klass->$action();
 });
